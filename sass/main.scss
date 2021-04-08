@@ -1,0 +1,45 @@
+@import "variables";
+
+//TYPOGRAPHY
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: $custom_body-text;
+    font-weight: 400;
+}
+
+$font-family-base: 1.6rem;
+$font-family-sans-serif: $custom_body-text;
+$font-family-monospace:    null;
+$font-family-base:null;  
+$font-family-sans-serif: null !default; 
+
+
+$h1-font-size: 5.2rem;
+$h2-font-size: null;
+$h3-font-size: null;
+$h4-font-size: null;
+$h5-font-size: null;
+
+h1, .h1{
+    font-family: $custom_headings;
+}
+
+h2, .h2{
+    font-family: $custom_headings;
+}
+
+h3, .h3{
+    font-family: $custom_sub-headings;
+    font-weight: 500;
+}
+
+p{
+    font-family: $custom_body-text;
+    font-weight: 400;
+}
+
+@import "../bootstrap/scss/bootstrap.scss";
+

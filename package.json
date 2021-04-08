@@ -1,0 +1,22 @@
+{
+  "name": "garden-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliebrayton/garden-theme.git"
+  },
+  "author": "Ellie Brayton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliebrayton/garden-theme/issues"
+  },
+  "homepage": "https://github.com/elliebrayton/garden-theme#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
