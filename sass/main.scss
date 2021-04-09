@@ -24,11 +24,19 @@ html{
     font-size: 10px;
 }
 
-body{
+body, .site{
     font-family: $custom_body-text;
     font-weight: 400;
     color: $black;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+  
+.site-content {
+    flex: 1;
+}
+
 
 $font-family-base: 1.6rem;
 $font-family-sans-serif: $custom_body-text;
@@ -64,17 +72,26 @@ p{
 
 //NAVIGATION
 $navbar-light-color: $dark-green;
+$navbar-light-hover-color: $light-green;
 $navbar-toggler-font-size: 2.5rem;
 
-.nav-link {
-        color: $dark-green;
+.nav-link{
         font-size: 2rem;
         display: inline-block;
         margin:0 2rem;
     }
 
+.nav-link a:hover {
+    color: $light-green;
+}
+
 .navbar-light .navbar-toggler{
     border: none;
+}
+
+//FOOTER
+.footer{
+    height: 40px;
 }
 
 
