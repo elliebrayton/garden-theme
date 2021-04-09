@@ -1,5 +1,22 @@
 @import "variables";
 
+//COLORS
+$theme-colors: (
+    "primary": $brown,
+    "secondary": $dark-green,
+    "tertiary": $light-pink,
+    "accent": $light-green,
+    "neutral": $beige,
+);
+
+$theme-colors: map-remove(
+    $theme-colors, 
+    "success", 
+    "info", 
+    "danger", 
+    "warning"
+);
+
 //TYPOGRAPHY
 html{
     font-size: 10px;
@@ -13,8 +30,6 @@ body{
 $font-family-base: 1.6rem;
 $font-family-sans-serif: $custom_body-text;
 $font-family-monospace:    null;
-$font-family-base:null;  
-$font-family-sans-serif: null !default; 
 
 
 $h1-font-size: 5.2rem;
@@ -39,7 +54,11 @@ h3, .h3{
 p{
     font-family: $custom_body-text;
     font-weight: 400;
+    font-size: 2.2rem;
 }
+
+
+
 
 @import "../bootstrap/scss/bootstrap.scss";
 
