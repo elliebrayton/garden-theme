@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/elliebrayton/garden-theme#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.4.1"
   }
 }
