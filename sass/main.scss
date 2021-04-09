@@ -1,8 +1,5 @@
 @import "variables";
 
-
-
-
 //COLORS
 $theme-colors: (
     "primary": $brown,
@@ -22,6 +19,7 @@ $theme-colors: map-remove(
 );
 
 //TYPOGRAPHY
+
 html{
     font-size: 10px;
 }
@@ -72,6 +70,7 @@ $navbar-toggler-font-size: 2.5rem;
         color: $dark-green;
         font-size: 2rem;
         display: inline-block;
+        margin:0 2rem;
     }
 
 .navbar-light .navbar-toggler{

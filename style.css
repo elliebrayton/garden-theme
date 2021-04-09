@@ -28,7 +28,8 @@ p {
 .nav-link {
   color: #3F5031;
   font-size: 2rem;
-  display: inline-block; }
+  display: inline-block;
+  margin: 0 2rem; }
 
 .navbar-light .navbar-toggler {
   border: none; }

@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.typekit.net/qti2wuf.css">
+
         <title><?php bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
@@ -31,7 +32,7 @@
                           'container'         => 'div',
                           'container_class'   => 'collapse navbar-collapse',
                           'container_id'      => 'bs-example-navbar-collapse-1',
-                          'menu_class'        => 'nav navbar-nav',
+                          'menu_class'        => 'nav navbar-nav mx-auto my-3',
                           'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                           'walker'            => new WP_Bootstrap_Navwalker(),
                       ) );
