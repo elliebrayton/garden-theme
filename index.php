@@ -11,12 +11,14 @@
                     <p class="blog-post-info d-flex flex-column flex-md-row pb-3">
                         <span class="blog-post-date"><i class="icofont-calendar icofont-sm"> </i><?php echo get_the_date('F jS, Y');?></span>
                         <span class="blog-post-tags">
+                            
                             <?php
                                 $posttags = get_the_tags();
                                 if ($posttags) {
+                                    echo '<i class="icofont-tag"></i> ';
                                     $tagstrings = array();
                                         foreach($posttags as $tag) {
-                                            $tagstrings[] = '<a href="' . get_tag_link($tag->term_id) . '" class="tag-link-' . $tag->term_id . '">' . '<i class="icofont-tag"></i>' . $tag->name . '</a>';
+                                            $tagstrings[] = '<a href="' . get_tag_link($tag->term_id) . '" class="tag-link-' . $tag->term_id . '">' . $tag->name . '</a>';
                                         } //END FOREACH
                                     echo implode(', ', $tagstrings);
                                 }//END IF
@@ -29,6 +31,7 @@
                     <p class="blog-post-excerpt pt-3 mb-0"><?php echo get_the_excerpt(); ?></p>
                     <a class="secondary-button d-flex justify-content-end my-5" href="<?php get_the_permalink(); ?>"> <span>Read More</span></a>
                     <hr>
+                    <?php gardenPagination(); ?>
                 </section>
             <?php 
                     } //END WHILE

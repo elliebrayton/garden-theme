@@ -1,7 +1,9 @@
 <?php 
 
 /*****************************************
+ 
     STYLESHEET & SCRIPTS
+
 *****************************************/
 
 function custom_theme_scripts(){
@@ -25,18 +27,30 @@ function custom_theme_scripts(){
 add_action('wp_enqueue_scripts', 'custom_theme_scripts');
 
 /*****************************************
+    
     ADDS FEATURED IMAGE
+    
 *****************************************/
 
 add_theme_support('post-thumbnails');
 
 /*****************************************
+ 
     CUSTOM READ MORE TEXT
+
 *****************************************/
+
 function new_excerpt_more( $more ) {
     return '';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+/*****************************************
+ 
+    REGISTER MENU
+
+*****************************************/
 
 function register_my_menus(){
     register_nav_menus( array(
@@ -45,8 +59,32 @@ function register_my_menus(){
     ));
 }
 
+
 /*****************************************
+ 
+    PGINATION LINKS
+
+*****************************************/
+
+function gardenPagination(){
+    global $wp_query;
+
+    $big = 999999999; // need an unlikely integer
+    $translated = __( 'Page', 'mytextdomain' ); // Supply translatable string
+ 
+    echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages,
+            'before_page_number' => '<span class="screen-reader-text">'.$translated.' </span>'
+    ) );
+}
+
+/*****************************************
+ 
     Register Custom Nav Walker
+
 *****************************************/
 add_action('init', 'register_my_menus');
 
