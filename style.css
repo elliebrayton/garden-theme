@@ -80,27 +80,36 @@ body, p {
   font-size: 1.8rem;
   color: #75695F; }
 
-.secondary-button:link,
-.secondary-button:visited {
+.secondary-button span {
   background: #EFDAEB;
-  display: inline;
+  display: inline-block;
+  width: 180px;
+  margin-right: 0;
   position: relative;
   font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: .2px;
   padding: 3px 20px 3px 80px;
   border-radius: 25px;
-  float: right; }
+  overflow: none; }
 
-.secondary-button:link::before {
+.secondary-button span:before {
   display: inline-block;
   content: '';
   position: absolute;
   height: 2px;
   width: 50px;
   background: #75695F;
-  top: 13px;
+  top: 14px;
   left: 20px; }
+
+a.secondary-button:link,
+a.secondary-button:visited {
+  text-decoration: none; }
+
+a.secondary-button:link:hover {
+  font-style: italic;
+  transition: .3s; }
 
 @media (min-width: 410px) {
   .blog-post-image-wrapper img {
