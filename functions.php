@@ -14,9 +14,12 @@ function custom_theme_scripts(){
 
     //MAIN JS FILE
     wp_enqueue_script('main-js', get_stylesheet_directory_uri() . '/js/scripts.js');
+    
+    //ICOFONT FILE
+    wp_enqueue_style('icofont', get_stylesheet_directory_uri() . '/icofont/icofont.css');
 
-        //MAIN STYLESHEET
-        wp_enqueue_style('main-style', get_stylesheet_uri());
+    //MAIN STYLESHEET
+    wp_enqueue_style('main-style', get_stylesheet_uri());
 }
 
 add_action('wp_enqueue_scripts', 'custom_theme_scripts');
