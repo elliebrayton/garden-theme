@@ -1,5 +1,4 @@
 <?php 
-    /*Template Name: Archives*/
         get_header(); 
     ?>
     <div class="site-content container row py-8 px-5 px-sm-0 mx-auto">
@@ -14,7 +13,6 @@
                         <p class="blog-post-info d-flex flex-column flex-md-row pb-3">
                             <span class="blog-post-date"><i class="icofont-calendar icofont-sm"> </i><?php echo get_the_date('F jS, Y');?></span>
                             <span class="blog-post-tags">
-                                
                                 <?php
                                     $posttags = get_the_tags();
                                     if ($posttags) {

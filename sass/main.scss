@@ -20,8 +20,8 @@ $theme-colors: map-remove(
 
 //BREAKPOINTS
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
+  sm: 700px,
+  md: 830px,
   lg: 960px,
   xl: 1240px
 ) !default;
@@ -101,6 +101,14 @@ body, p{
     color: $black;
 }
 
+.search-title{
+    font-family: $custom_sub-headings;
+    font-weight: 500;
+    color: $brown;
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
 //NAVIGATION
 $navbar-light-color: $dark-green;
 $navbar-light-hover-color: $light-green;
@@ -120,6 +128,114 @@ $navbar-toggler-font-size: 2.5rem;
     border: none;
 }
 //HOMEPAGE
+h2.widgettitle{
+    font-size: 1.3rem;
+    font-family: $custom_sub-headings;
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background: white;
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.featured-link{
+    width: 250px;
+    position: relative;
+}
+
+.featured-link-img{
+    max-width: 100%;
+}
+
+.featured-link-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px !important;
+}
+
+@media(min-width: 381px){
+    .featured-link{
+        width: 300px;
+    }
+    
+    .featured-link-img img{
+        height: 300px !important;
+    }
+
+    h2.widgettitle{
+        font-size: 2rem;
+    }
+}
+
+@media(min-width: 478px){
+    .featured-link{
+        width: 400px;
+    }
+    
+    .featured-link-img img{
+        height: 400px !important;
+    }
+
+    h2.widgettitle{
+        font-size: 2rem;
+        width: 345px;
+        padding: 2.3rem;
+    }
+}
+
+
+@media(min-width: 698px){
+    .featured-link{
+        width: 200px;
+    }
+    
+    .featured-link-img img{
+        height: 200px !important;
+    }
+
+    h2.widgettitle{
+        font-size: 1.6rem;
+        width: 150px;
+        padding: 1rem;
+    }
+}
+
+@media(min-width: 800px){
+    .featured-link{
+        width: 260px;
+    }
+    
+    .featured-link-img img{
+        height: 260px !important;
+    }
+
+    h2.widgettitle{
+        font-size: 2rem;
+        width: 200px;
+    }
+}
+
+
+
+
+@media(min-width: 1200px){
+    .featured-link{
+        width: 325px;
+    }
+    
+    .featured-link-img img{
+        height: 325px !important;
+    }
+
+    h2.widgettitle{
+        font-size: 2rem;
+    }
+}
 .newsletter-info h2{
     text-transform: capitalize;
     font-size: 3rem;

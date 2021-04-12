@@ -6,13 +6,23 @@
 
     get_header(); 
 ?>
-    <div class="site-content py-5 px-5 px-sm-0">
+    <div class="site-content py-5 px-1 px-sm-0">
         <main class="main">
             <section class="featured-posts container">
                 <p class="text-center">This is where the slider will go</p>
             </section>
-            <section class="featured-links container">
-                <p class="text-center">This is where the featured links will go</p>
+            <section class="featured-links container py-7">
+                <div class="featured-links-wrapper d-flex flex-wrap justify-content-center justify-content-lg-between justify-content-xl-around justify-content-around container">
+                    <div class="featured-link">
+                        <?php dynamic_sidebar('featured-link-one'); ?>
+                    </div>
+                    <div class="featured-link">
+                        <?php dynamic_sidebar('featured-link-two'); ?>
+                    </div>
+                    <div class="featured-link">
+                        <?php dynamic_sidebar('featured-link-three'); ?>
+                    </div>
+                </div>
             </section>
             <section class="newsletter bg-tertiary">
                 <div class="newsletter-wrapper container row mx-auto p-5">

@@ -138,5 +138,32 @@ function content($limit) {
   return $content;
 }
 
+function blank_widgets_init(){
+    register_sidebar(array(
+        'name' =>('Featured Link with Image (First)'),
+        'id' => 'featured-link-one',
+        'description' => 'Place an image of yourself and add a link',
+        'before_widget' => '<div class="featured-link-img">',
+        'after_widget' => '</div>'
+    ));
+
+    register_sidebar(array(
+        'name' =>('Featured Link with Image (Middle)'),
+        'id' => 'featured-link-two',
+        'description' => 'Place an image of yourself and add a link',
+        'before_widget' => '<div class="featured-link-img">',
+        'after_widget' => '</div>'
+    ));
+    register_sidebar(array(
+        'name' =>('Featured Link with Image (Last)'),
+        'id' => 'featured-link-three',
+        'description' => 'Place an image of yourself and add a link',
+        'before_widget' => '<div class="featured-link-img">',
+        'after_widget' => '</div>'
+    ));
+}
+
+add_action('widgets_init', 'blank_widgets_init');
 
 ?>
+
