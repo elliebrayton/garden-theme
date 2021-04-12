@@ -14,8 +14,29 @@
             <section class="featured-links container">
                 <p class="text-center">This is where the featured links will go</p>
             </section>
-            <section class="newsletter">
-                <p class="text-center">This is where the newletter will go</p>
+            <section class="newsletter bg-tertiary">
+                <div class="newsletter-wrapper container row mx-auto p-5">
+                    <div class="newsletter-info col-6 col-lg-5 offset-md-1">
+                        <h2 class="h2 text-primary">Join The Community</h2>
+                            <ul class="newsletter-list">
+                                <li>+ insider updates</li>
+                                <li>​+ health and wellness tips & FREE PDFs</li>
+                                <li>+ exclusive recipes </li>
+                                <li>+ simplified nutrition info to expand your nutrition knowledge</li>
+                            </ul>
+                    </div>
+                    <form action="" class="newsletter-form col-6 col-lg-5 align-self-center">
+                        <p>This section still needs to be styled</p>
+                    <div class="form-group row">
+                            <label for="name" class="col-12 col-md-2">Name</label>
+                            <input type="text" class="form-control col-12  col-md-10">
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12  col-md-2">E-mail</label>
+                            <input type="email" class="form-control col-12 col-md-10">
+                        </div>
+                    </form>
+                </div>
             </section>
             <section class="recent-posts d-flex flex-wrap justify-content-center justify-content-lg-between justify-content-xl-around justify-content-around container">
                 <?php 

@@ -26,6 +26,20 @@ $container-max-widths: (
   xl: 1240px
 ) !default;
 
+//SPACING
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 5),
+  7: ($spacer * 6.5),
+  8: ($spacer * 8),
+);
+
 //TYPOGRAPHY
 
 html{
@@ -106,6 +120,21 @@ $navbar-toggler-font-size: 2.5rem;
     border: none;
 }
 //HOMEPAGE
+.newsletter-info h2{
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.newsletter-info{
+    border-right: 1px solid $brown;
+}
+
+.newsletter-list{
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
 .recent-post-item{
     width: 325px;
     border: 1px solid rgb(173, 173, 173);
@@ -139,7 +168,6 @@ $navbar-toggler-font-size: 2.5rem;
 @media(min-width:1200px){
     .recent-post-item{
         width: 350px;
-        height: 230px;
     }
 }
 
