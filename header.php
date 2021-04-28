@@ -8,16 +8,21 @@
         <link rel="stylesheet" href="https://use.typekit.net/qti2wuf.css">
 
         <title><?php bloginfo('name'); ?></title>
-        <?php wp_head(); ?>
+        <?php wp_head(); ?> 
     </head>
     <!--END HEAD-->
     <!--START BODY -->
     <body class="site" <?php body_class(); ?>>
         <!--START HEADER-->
         <header class="header">
-            <div class="title-wrapper container d-flex justify-content-between py-5">
-                <h1 class="h1"><?php bloginfo('name'); ?></h1>
-                <?php get_search_form(); ?>
+            <div class="title-wrapper container d-flex flex-column align-items-center justify-content-between px-md-3 px-lg-0 flex-md-row py-5">
+                <?php if(get_header_image() == '') {?>
+                    <h1 class="h1"><a href="<?php get_home_url(); ?>"><?php bloginfo('name') ?></a></h1>
+                    <?php } else {?>
+                        <a href="<?php get_home_url(); ?>"><img class="logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width;?>" alt="logo"></a>
+                        <?php } ?>
+
+                <div class="search-form py-3"><?php get_search_form(); ?></div>
             </div>
             <div class="main-nav-wrapper bg-accent">
             <nav class="main-nav navbar navbar-expand-md navbar-light container text-center" role="navigation">

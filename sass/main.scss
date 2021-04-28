@@ -6,6 +6,7 @@ $theme-colors: (
     "secondary": $dark-green,
     "tertiary": $light-pink,
     "accent": $light-green,
+    "accent2": $pink,
     "neutral": $beige,
     "dark": $black
 );
@@ -21,8 +22,8 @@ $theme-colors: map-remove(
 //BREAKPOINTS
 $container-max-widths: (
   sm: 700px,
-  md: 830px,
-  lg: 960px,
+  md: 800px,
+  lg: 970px,
   xl: 1240px
 ) !default;
 
@@ -64,9 +65,8 @@ $font-family-base: 1.6rem;
 $font-family-sans-serif: $custom_body-text;
 $font-family-monospace:    null;
 
-
-$h1-font-size: 5.2rem;
-$h2-font-size: 4.6rem;
+$h1-font-size: 4rem;
+$h2-font-size: 3.8rem;
 $h3-font-size: 3rem;
 $h4-font-size: 2.8rem;
 
@@ -107,6 +107,12 @@ body, p{
     color: $brown;
     text-transform: capitalize;
     font-size: 3rem;
+}
+
+//LOGO
+img.logo {
+    width: 260px;
+    height: 52px;
 }
 
 //NAVIGATION
@@ -238,17 +244,71 @@ h2.widgettitle{
 }
 .newsletter-info h2{
     text-transform: capitalize;
-    font-size: 3rem;
+    font-size: 3,4rem;
 }
 
 .newsletter-info{
-    border-right: 1px solid $brown;
+    padding: 3rem 0;
+    border-bottom: 1px solid $brown;
 }
+
+.newsletter-form{
+    padding: 3rem 0;
+}
+
+input#wpforms-72-field_0,
+input#wpforms-72-field_0-last,
+input#wpforms-72-field_1
+ {
+    border-radius: 30px;
+    height: 30px;
+    border: 1px $light-pink solid;
+}
+
+.newsletter-form .wpforms-container-full .wpforms-form .wpforms-required-label{
+    color: $pink;
+}
+
+.newsletter-form .wpforms-container-full .wpforms-form .wpforms-submit-container {
+    padding: 10px 0 0 0;
+    clear: both;
+    position: relative;
+    margin-right: 0;
+    text-align: right;
+}
+
+button#wpforms-submit-72{
+    background-color: #af80a6;
+    border: 1px solid #ddd;
+    color: white;
+    font-size: 1.6rem;
+    padding: 3px 15px;
+    border-radius: 30px;
+}
+
+
 
 .newsletter-list{
     list-style-type: none;
     padding: 0;
     font-size: 1.6rem;
+}
+
+@media(min-width: 768px){
+    .newsletter-info h2{
+        text-transform: capitalize;
+        font-size: 4rem;
+    }
+
+    .newsletter-info{
+        padding: 0;
+        border-bottom: none;
+        border-right: 1px solid $brown;
+    }
+    
+    .newsletter-form{
+        padding: 0;
+    }
 }
 
 .recent-post-item{
@@ -288,6 +348,9 @@ h2.widgettitle{
 }
 
 //BLOG
+main .blog {
+    min-width: 100%;
+}
 .blog-post-image-wrapper{
     max-width: 100%;
 }
@@ -299,7 +362,7 @@ h2.widgettitle{
 
 .blog-post-info{
     font-size: 1.6rem;
-    color: $brown;
+    color: $dark-green;
 }
 
 .blog-post-info > span:not(:last-child) {
@@ -308,14 +371,19 @@ h2.widgettitle{
 
 .blog-post-tags a:link,
 .blog-post-tags a:visited{
-    color: $brown;
+    color: $dark-green;
     text-transform: capitalize;
 }
 
 .blog-post-tags a:hover{
     text-decoration: none;
     font-style: italic;
-    color: $dark-green;
+    color: $pink;
+}
+
+.blog-pagination{
+    font-size: 2rem;
+
 }
 
 .icofont-calendar,
@@ -375,11 +443,325 @@ a.secondary-button:link:hover{
     } 
 }
 
+//CARDS
+
+$card-cap-bg: none;
+
+
+.card li{
+    list-style: none;
+}
+
+.card-header{
+    color: $dark-green;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+}
+
+.list-group-item a:link,
+.list-group-item a:visited{
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.list-group-item a:hover{
+    color: $light-green !important;
+}
+$badge-font-size: 70%;
+$badge-padding-y: 5px;
+$badge-padding-x:  5px;
+
+//TAGS PAGE (RECIPE)
+
+a.page-numbers:link,
+a.page-numbers:visited {
+    color: $dark-green;
+    text-decoration: none;
+}
+
+.tag-pagination {
+    font-size: 2rem;
+}
+
+.recipe-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.recipe-post-item{
+    width: 275px;
+    border: 1px solid rgb(173, 173, 173);
+}
+.recipe-post-image-wrapper{
+    max-width: 100%;
+}
+
+.recipe-post-image-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.recipe-post-info-wrapper p{
+    font-size: 1.8rem;
+}
+
+@media(min-width:385px){
+    .rrecipe-post-item{
+        width: 340px;
+    }
+}
+
+@media(min-width:514px){
+    .recipe-post-item{
+        width: 415px;
+    }
+}
+
+@media(min-width:600px){
+    .recipe-posts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 600px;
+    }
+
+    .recipe-post-item{
+        width: 260px;
+    }
+
+    .recipe-post-image-wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 150px;
+    }
+
+    .recipe-post-info-wrapper h3{
+        font-size: 2rem;
+    }
+
+    .recipe-post-info-wrapper p{
+        font-size: 1.5rem;
+    }
+}
+
+@media(min-width:758px){
+    .recipe-posts {
+        max-width: 650px;
+    }
+
+    .recipe-post-item{
+        width: 305px;
+    }
+
+    .recipe-post-image-wrapper img{
+        height: 200px;
+    }
+}
+
+@media(min-width:970px){
+    .recipe-posts {
+        max-width: 900px;
+    }
+
+    .recipe-post-item{
+        width: 220px;
+    }
+
+    .recipe-post-image-wrapper img{
+        height: 150px;
+    }
+}
+
+@media(min-width:993px){
+    .recipe-posts {
+        max-width: 1200px;
+    }
+    .recipe-post-item{
+        width: 280px;
+    }
+
+    .recipe-post-image-wrapper img{
+        height: 190px;
+    }
+}
+
+
+@media(min-width:1200px){
+    .recipe-posts {
+        max-width: 1200px;
+    }
+    .recipe-post-item{
+        width: 365px;
+    }
+
+    .recipe-post-image-wrapper img{
+        height: 230px;
+    }
+}
+
+//SEARCH 
+
+#searchform{
+    font-size: 1.5rem;
+}
+#searchform label{
+    color: $brown;
+    text-transform: uppercase;
+}
+
+#searchform input#s {
+    border: 1px $brown solid;
+    color: $brown;
+    border-radius: 20px;
+    width: 170px;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+#searchform #searchsubmit {
+    color: $brown;
+    background: $light-green;
+    border: none;
+    border-radius: 30px;
+    width: 39px;
+}
+
+//CONTACT
+
+.wpforms-field-row.wpforms-field-large {
+    display: flex;
+    flex-direction: column;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-one-half {
+    width: 100%;
+    margin-left: 0;
+}
+
+.contact-form label{
+    color: $brown;
+}
+
+div#wpforms-69 {
+    background: $light-pink;
+    border-radius: 10px;
+    width: 270px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-required-label {
+    color: $pink;
+    font-weight: 400;
+}
+
+input#wpforms-69-field_0,
+input#wpforms-69-field_0-last,
+input#wpforms-69-field_1{
+    border-radius: 20px;
+    height: 30px;
+    border: 1px $light-pink solid;
+}
+
+textarea#wpforms-69-field_2{
+    border-radius: 20px;
+    border: 1px $light-pink solid;
+}
+
+button#wpforms-submit-69 {
+    background-color: #af80a6;
+    border: 1px solid #ddd;
+    color: white;
+    font-size: 1.6rem;
+    padding: 3px 15px;
+    border-radius: 30px;
+}
+
+@media(min-width:410px){
+    div#wpforms-69 {
+        width: 364px;
+        padding: 3rem;
+    }
+}
+
+@media(min-width:553px){
+    div#wpforms-69 {
+        width: 500px;
+        padding: 3rem;
+    }
+
+    .wpforms-field-row.wpforms-field-large {
+        display: block;
+    }
+    
+    div.wpforms-container-full .wpforms-form .wpforms-one-half {
+        width: 48%;
+        margin-left: 4%;
+    }
+}
+
+
+
 //FOOTER
 .footer{
     height: 40px;
 }
 
+//CAROUSEL STYLING 
+
+
+img.attachment-large.size-large.wp-post-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center 81%;
+}
+
+.slide-image {
+    height: 400px;
+}
+.carousel-caption {
+    position: absolute;
+    left: unset !important;
+    top: 40px;
+    right: 3% !important;
+    text-align: right !important;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    background: $brown;
+    max-height: 120px;
+    min-width: 400px;
+    border-radius: 5px;
+}
+
+.carousel-date {
+    text-align: left;
+    padding-left: 2rem;
+    font-size: 2rem;
+    font-family: $custom_sub-headings;
+    color: $light-green;
+}
+
+h3.carousel-link {
+    background: $brown;
+    padding: 10px 2rem;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.carousel-link a:link,
+.carousel-link a:visited{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 300;
+}
 
 @import "../bootstrap/scss/bootstrap.scss";
 

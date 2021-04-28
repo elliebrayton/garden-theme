@@ -1,7 +1,4 @@
-<?php 
-    /*Template Name: Archives*/
-        get_header(); 
-    ?>
+<?php get_header(); ?>
     <div class="site-content container row py-8 px-5 px-sm-0 mx-auto">
         <main class="main col-lg-8 mb-5">
         <h2 class="search-title">Search Results for "<?php echo "<i>$s</i>"; ?>"</h2>
@@ -53,41 +50,41 @@
         </main>
                 <!--START ASIDE -->
                 <aside class="offset-lg-1 col-lg-3">
-                    <div class="card">
-                        <h3 class="card-header text-black rounded-0 archive-header">Archive</h3>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush pl-3 pt-2">
+                    <div class="card rounded-0 border-0">
+                        <h3 class="card-header text-black rounded-0 border-0">Archive</h3>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
                                 <?php wp_get_archives(array(
                                     'type' => 'monthly',
-                                    'before' => '<li class="list-group-item archive-link">',
+                                    'before' => '<li class="list-group-item">',
                                     'after' => '</li>',
                                 )
                                 ); ?>
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
-                        <h3 class="card-header text-black rounded-0 archive-header">Categories</h3>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush pl-3 pt-2">
+                    <div class="card rounded-0 border-0">
+                        <h3 class="card-header text-black rounded-0 border-0">Categories</h3>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
                                 <?php 
                                     $categories = get_categories();
                                     foreach ($categories as $cat) {
                                         $category_link = get_category_link($cat->cat_ID);
-                                        echo '<li class="list-group-item archive-link"><a href="'.esc_url( $category_link ).'" title="'.esc_attr($cat->name).'">'.$cat->name.'</a></li>';
+                                        echo '<li class="list-group-item border-bottom-0"><a href="'.esc_url( $category_link ).'" title="'.esc_attr($cat->name).'">'.$cat->name . '('. $cat->count . ')' . '</a></li>';
                                         }
                                 ?>
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
-                        <h3 class="card-header text-black rounded-0 archive-header">Tags</h3>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush pl-3 pt-2">
+                    <div class="card rounded-0 border-0">
+                        <h3 class="card-header text-black rounded-0 border-0">Tags</h3>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
                                 <?php 
                                     $tags = get_tags();
                                     foreach($tags as $tag){
-                                        echo '<li class="list-group-item archive-link"><a href="'. get_tag_link($tag->term_id) . '">'. $tag->name.'</a></li>';
+                                        echo '<li class="list-group-item border-bottom-0"><a href="'. get_tag_link($tag->term_id) . '">'. $tag->name. ' ('. $tag->count . ') </a></li>';
                                     }
                                 ?>
                             </ul>
